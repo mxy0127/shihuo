@@ -1,0 +1,34 @@
+import styled from 'styled-components'
+export const  ListStyled = styled.div`
+    ul{
+        display:flex;
+        flex-direction:column;
+        li{
+            height:1.17rem;
+            padding:.1rem;
+            display:flex;
+            flex-direction:row;
+            img{
+                display:block;
+                width:1.12rem;
+            }
+            >div{
+                padding-left:.1rem;
+                display:flex;
+                flex-direction:column;
+                h2,h3,h4{
+                    flex:1;
+                }
+                h2{
+                    color:#333333;
+                }
+                h3{
+                    color:#FF4338;
+                }
+                h4{
+                    color:#A4A4A4;
+                } 
+            }
+        }
+    }
+`
