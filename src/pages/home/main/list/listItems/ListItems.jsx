@@ -1,4 +1,4 @@
-import React,{ useEffect,useState } from 'react'
+import React,{ useEffect,useState,useCallback } from 'react'
 import { getNews } from '@util/homefis.js'
 import { ListStyled } from './itemstyled'
 function ListItems(props){
@@ -15,13 +15,19 @@ function ListItems(props){
         })()
         
     },[props.selectedNav.type,props.selectedTab.channel]);
+
+    const toDetail = useCallback((href)=>{
+            window.location.href = href;
+        
+    },[])
+
     return (
         <ListStyled>
             <ul>
                 {
                     list.map((value,index)=>{
                         return (
-                            <li key={'识货app'+index}>
+                            <li key={'识货app'+index} onClick={()=>{toDetail(value.data.href)}}>
                                 <img src={value.data.img} alt=""/>
                                 <div>
                                     <h2>{value.data.title}</h2>

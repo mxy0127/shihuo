@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TabBar } from 'antd-mobile';
 import { Main } from '../main/index'
+import More from '../more/More'
 class Layout extends Component {
     constructor(props) {
         super(props);
@@ -121,7 +122,7 @@ class Layout extends Component {
                   });
                 }}
               >
-                {'更多'}
+                {<More></More>}
               </TabBar.Item>
             </TabBar>
           </div>

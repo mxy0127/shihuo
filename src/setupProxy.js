@@ -9,5 +9,13 @@ module.exports = function(app) {
             '^/api':''
         }
       })
+    ),
+    app.use(
+      '/jssdk',
+      proxy({
+        target: 'http://localhost:3333/',
+        changeOrigin: true
+      })
     )
+
   };
